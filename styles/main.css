@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+
 :root {
     --color-bg: #f9f9fb;
     --color-text: #2b2b2b;
@@ -7,6 +9,7 @@
     --color-nav-bg: #f1f5ff;
     --color-form-border: #cccccc;
     --color-button-hover: #68afe4;
+    --color-alternative-bg: #eaeaf9;
 }
 
 * {
@@ -28,16 +31,27 @@ a {
     color: inherit;
 }
 
+/**
+ * Top-bar styles
+ */
 header {
-    background: linear-gradient(180deg,rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
-    /* background-color: var(--color-nav-bg); */
-    /* border-bottom: 1px solid var(--color-muted); */
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
     padding: 1rem 2rem;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
+    transition: ease-out 250ms;
+}
+
+header.scrolled {
+    background: var(--color-nav-bg);
+    box-shadow: 0.125rem 0.25rem 0.75rem 0 rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -64,6 +78,8 @@ nav ul {
 }
 
 nav ul li {
+    display: flex;
+    align-items: center;
     margin: 0;
 }
 
@@ -79,9 +95,26 @@ nav ul li a:hover {
     background-color: var(--color-secondary);
 }
 
+nav ul li .change-language {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav ul li .change-language > img {
+    height: 2rem;
+}
+
+header.scrolled nav ul li a {
+    color: var(--color-text);
+}
+
+/**
+ * Sections styles
+ */
 section {
-    padding: 4rem 2rem;
-    max-width: 1100px;
+    position: relative;
+    padding: 4rem calc((100vw - 1100px) / 2);
     margin: 0 auto;
 }
 
@@ -91,10 +124,12 @@ section h2 {
     margin-bottom: 2rem;
     color: var(--color-primary);
     text-align: center;
+    font-family: 'Cal Sans', sans-serif;
+    letter-spacing: 0.15rem;
 }
 
 section h2::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 4rem;
     height: 0.4rem;
@@ -111,17 +146,85 @@ section article h3 {
 }
 
 section#banner {
-    background-image: url("../images/man-cleaning-his-home.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),
+        url('../images/man-cleaning-his-home.jpg');
     background-size: cover;
     height: 100vh;
     width: 100vw;
     max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section#banner h1 {
+    text-align: right;
+    flex: 1;
+    max-width: 1100px;
+    font-family: 'Cal Sans', sans-serif;
+    letter-spacing: 0.25rem;
+    font-size: 5em;
+    color: var(--color-bg);
+}
+
+section#services {
+    background-color: var(--color-alternative-bg);
+}
+
+/**
+ * Service selection styles
+ */
+#services-selection {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+#services-selection button {
+    background-color: transparent;
+    border: 2px solid var(--color-bg);
+    color: var(--color-text);
+    padding: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    flex: 1;
+    min-width: 250px;
+    outline: none;
+    border-radius: 0.5rem;
+}
+
+#services-selection button.active {
+    background-color: var(--color-bg);
+    color: black;
+}
+
+#services article {
+    display: none;
+    animation: fadeIn 0.4s ease-in-out;
+    background-color: var(--color-bg);
+    padding: 1.5rem 2rem 1rem;
+    border-radius: 0.5rem;
+}
+
+#services article.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 ul,
 dl {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-left: 1rem;
 }
 
 p,
@@ -130,6 +233,9 @@ dd {
     margin-bottom: 1rem;
 }
 
+/**
+ * Form styles
+ */
 form {
     display: flex;
     flex-direction: column;
@@ -170,6 +276,9 @@ form button:hover {
     background-color: var(--color-button-hover);
 }
 
+/**
+ * Footer styles
+ */
 footer {
     text-align: center;
     padding: 2rem;
@@ -178,6 +287,9 @@ footer {
     color: #666;
 }
 
+/**
+ * Device-exclusive styles
+ */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;

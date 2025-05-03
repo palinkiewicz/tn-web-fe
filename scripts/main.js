@@ -56,3 +56,37 @@ buttons.forEach((btn) => {
         showService(type);
     });
 });
+
+/**
+ * FAQ section
+ */
+const faq = document.querySelector('#faq');
+const faqDivElements = faq.querySelectorAll('div');
+
+faqDivElements.forEach((div) => {
+    div.addEventListener('click', () => {
+        const dd = div.querySelector('dd');
+
+        faq.querySelectorAll('dd').forEach((el) => {
+            if (el !== dd) el.classList.remove('active');
+        });
+
+        dd.classList.toggle('active');
+    });
+});
+
+/**
+ * Mobile burger
+ */
+const burger = document.querySelector('.burger');
+const navList = document.querySelector('nav ul');
+
+burger.addEventListener('click', () => {
+    navList.classList.toggle('active');
+});
+
+navList.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navList.classList.remove('active');
+    });
+});

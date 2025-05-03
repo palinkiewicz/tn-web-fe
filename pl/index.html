@@ -11,11 +11,14 @@
   <header>
     <nav>
       <img class="logo" src="../images/logo.png"></img>
+      <button class="burger" aria-label="Otwórz menu">
+        <img src="../images/menu.svg" alt="Menu icon">
+      </button>
       <ul>
-        <li><a href="#about">O nas</a></li>
-        <li><a href="#services">Usługi</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Kontakt</a></li>
+        <li><a href="#l_about">O nas</a></li>
+        <li><a href="#l_services">Usługi</a></li>
+        <li><a href="#l_faq">FAQ</a></li>
+        <li><a href="#l_contact">Kontakt</a></li>
         <li><a href="../en/index.html" class="change-language">
           <img src="../images/uk-flag.png" alt="Flag of the United Kingdom">
           <span>EN</span>
@@ -29,18 +32,30 @@
   </section>
 
   <section id="about">
+    <span id="l_about" class="link-scroll"></span>
     <h2>O nas</h2>
-    <p>Nasza firma <strong>Tenerife North Cleaning Service</strong> jest polskim zespołem, który oferuje spersonalizowane usługi w sprzątaniu wakacyjnym jak i komercyjnym na północy Teneryfy. Posiadamy dużą wiedzę w zakresie utrzymania czystości i zachęcającego wyglądu Twojego mieszkania.</p>
-    <p>Pomysł na założenie firmy powstał jeszcze na Islandii, gdzie zebraliśmy lata doświadczenia. Wysoka jakość usług i profesjonalizm to nasz główny cel.</p>
-    <p>Do każdego klienta podchodzimy indywidualnie. Twoja satysfakcja to nasz priorytet.</p>
+    <div>
+      <div>
+        <img src="../images/man-and-woman.png" alt="Man and woman who are cleaning something">
+      </div>
+      <div>
+        <p>Nasza firma <strong>Tenerife North Cleaning Service</strong> jest polskim zespołem, który oferuje spersonalizowane usługi w sprzątaniu wakacyjnym jak i komercyjnym na północy Teneryfy. Posiadamy dużą wiedzę w zakresie utrzymania czystości i zachęcającego wyglądu Twojego mieszkania.</p>
+        <p>Pomysł na założenie firmy powstał jeszcze na Islandii, gdzie zebraliśmy lata doświadczenia w tym zakresie. Wiemy, że wysoka jakość usług i profesjonalizm jest oczekiwana przez klientów, więc stanowi ona nasz główny cel.</p>
+        <p>Do każdego klienta podchodzimy indywidualnie. Twoja satysfakcja to nasz priorytet.</p>
+      </div>
+    </div>
   </section>
 
   <section id="services">
+    <span id="l_services" class="link-scroll"></span>
     <h2>Usługi</h2>
 
     <div id="services-selection">
       <button data-type="cleaning">
         <h3>Sprzątanie apartamentów wakacyjnych</h3>
+      </button>
+      <button data-type="cleaning-houses">
+        <h3>Sprzątanie domów, mieszkań i biur</h3>
       </button>
       <button data-type="conservation">
         <h3>Konserwacja</h3>
@@ -51,66 +66,90 @@
     </div>
 
     <article data-type="cleaning">
+      <p><strong>Opłaty za sprzątanie apartamentu:</strong></p>
       <ul>
-        <li>1 sypialnia – 65 EUR</li>
-        <li>2 sypialnie – 89 EUR</li>
-        <li>3 sypialnie – 109 EUR</li>
+        <li>z 1 sypialnią – 65 EUR</li>
+        <li>z 2 sypialniami – 89 EUR</li>
+        <li>z 3 sypialniami – 109 EUR</li>
       </ul>
-      <p>Cena zawiera sprzątanie oraz pranie pościeli, ręczników, ściereczek, dywaników łazienkowych.</p>
+      <p>*Cena obejmuje sprzątanie oraz pranie pościeli (prześcieradło płaskie, prześcieradło z gumką, poszewki na poduszki), ręczników kąpielowych, ściereczek kuchennych, ręczników do rąk, dywaników łazienkowych.</p>
       <p><strong>Sprzątanie willi:</strong> wycena indywidualna</p>
-      <p><strong>Pakiet powitalny (na życzenie):</strong> 10 EUR (wino, woda, kawa, herbata, papier toaletowy, worki na śmieci)</p>
+      <p><strong>Pakiet powitalny (na życzenie właściciela):</strong> 10 EUR (zakup wina, wody, kawy, herbaty, papieru toaletowego, worków na śmieci)</p>
+    </article>
+
+    <article data-type="cleaning-houses">
+      <p>Jeśli posiadasz mieszkanie, dom czy biuro, jesteśmy zaufaną firmą z doświadczeniem, która utrzyma Twoją nieruchomość w czystości. Oferujemy usługę jednorazowego sprzątania lub cyklicznego aby utrzymać Twój dom cały czas w czystości i świeżości.</p>
+      <p>Dodatkowo oferujemy możliwość zamówienia głębokiego czyszczenia np. gdy potrzebujesz dokładniejszego sprzątania niż zwykle. Usuniemy brud z każdego zakątka Twojej posesji i trudno dostępnych miejsc.</p>
+      <p><strong>Ceny są ustalane indywidualnie</strong> w zależności od zamawianej usługi. Można z Nami skontaktować się przez formularz na stronie, Facebook lub WhatsApp.</p>
     </article>
 
     <article data-type="conservation">
-      <p>Współpracujemy z doświadczonymi fachowcami, którzy szybko i skutecznie rozwiążą wszelkie problemy w wynajmowanej nieruchomości.</p>
+      <p>Współpracujemy z doświadczonymi fachowcami, którzy szybko i skutecznie potrafią rozwiązać wszelkie problemy zaistniałe w wynajmowanej nieruchomości, aby wszystko działało w 100%.</p>
     </article>
 
     <article data-type="management">
-      <p>Jeśli masz nieruchomość na północy Teneryfy, oferujemy kompleksowe zarządzanie apartamentami wakacyjnymi z licencją Vivienda Vacacional.</p>
-      <p>Pobieramy 15% zysków z wynajmu. Sprzątanie, pranie i konserwacja są dodatkowo fakturowane.</p>
+      <p>Jeśli masz nieruchomość na północy Teneryfy i chciałbyś w pełni ją wykorzystać dodatkowo oferujemy usługę zarządzania apartamentów wakacyjnych posiadających licencję Vivienda Vacacional.</p>
+      <p><strong>Pobieramy 15% zysku z wynajmowanych apartamentów</strong> (po uwzględnieniu innych opłat i kosztów). Koszt sprzątania apartamentów, pościeli, ręczników i konserwacja jest dodatkowy. Wystawiamy szczegółowe faktury za wykonane przez nas usługi, aby zapewnić pełną przejrzystość.</p>
+      <p>Chcemy zapewnić właścicielom nieruchomości komfort i gwarancję, żeby nie musieli się o nic martwić, a nasze zadania obejmują:</p>
       <ul>
         <li>Zarządzanie rezerwacjami</li>
-        <li>Obsługa Booking.com, Airbnb</li>
-        <li>Marketing, komunikacja z gośćmi</li>
-        <li>Fotografie do promocji</li>
+        <li>Obsługa portali typu Booking.com, Airbnb</li>
+        <li>Marketing na innych platformach, komunikacja z gośćmi</li>
+        <li>Analizy w celu poprawy rentowności</li>
+        <li>Obsługa fotograficzna do promocji pod wynajem wakacyjny</li>
       </ul>
     </article>
   </section>
 
   <section id="faq">
+    <span id="l_faq" class="link-scroll"></span>
     <h2>Często zadawane pytania</h2>
     <dl>
-      <dt>1. W jaki sposób dokonywane są rozliczenia za usługę?</dt>
-      <dd>Faktury są wystawiane co miesiąc po wykonanej usłudze.</dd>
+      <div>
+        <dt>1. W jaki sposób dokonywane są rozliczenia za usługę?</dt>
+        <dd>Faktury są wystawiane co miesiąc po wykonanej przez Nas usłudze.</dd>
+      </div>
 
-      <dt>2. Czy muszę zapewnić środki czystości?</dt>
-      <dd>Nie, nasza firma posiada wszystkie środki oraz niezbędny sprzęt.</dd>
+      <div>
+        <dt>2. Czy zlecając sprzątanie apartamentu muszę zapewnić środki czyszczące i niezbędny sprzęt?</dt>
+        <dd>Nie, nasza firma posiada wszystkie środki czystości oraz sprzęt.</dd>
+      </div>
     </dl>
     <p>Jeśli chcesz uzyskać więcej informacji, skontaktuj się z nami: email, telefon, WhatsApp. Znajdujemy się na północy Teneryfy.</p>
   </section>
 
-  <!-- Sekcja kontakt -->
   <section id="contact">
+    <span id="l_contact" class="link-scroll"></span>
     <h2>Kontakt</h2>
-    <p>Email: <a href="mailto:xxx@xxx.pl">xxx@xxx.pl</a></p>
-    <p>Telefon: <a href="tel:+34XXXXXXXXX">+34 XXX XXX XXX</a></p>
-
-    <form>
-      <label for="name">Imię i nazwisko</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Adres email</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Wiadomość</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <button type="submit">Wyślij</button>
-    </form>
+    <div>
+      <div>
+        <h3>Informacje kontaktowe</h3>
+        <p>Jeśli masz do nas jakiekolwiek dodatkowe pytania, potrzebujesz wyceny indywidualnej lub chcesz skorzystać z naszych usług, możesz napisać do nas jedną z poniższych dróg komunikacji lub skorzystać z naszego formularza kontakowego.</p>
+        <p><img src="../images/email.svg" alt="E-mail"><a href="mailto:xxx@xxx.pl">xxx@xxx.pl</a></p>
+        <p><img src="../images/phone.svg" alt="Phone"><a href="tel:+34XXXXXXXXX">+34 XXX XXX XXX</a></p>
+        <p><img src="../images/facebook.svg" alt="Facebook"><a href="">Placeholder</a></p>
+        <p><img src="../images/whatsapp.svg" alt="WhatsApp"><a href="">Placeholder</a></p>
+      </div>
+      <div>
+        <h3>Formularz kontaktowy</h3>
+        <form>
+          <label for="name">Imię i nazwisko</label>
+          <input type="text" id="name" name="name" required>
+    
+          <label for="email">Adres email</label>
+          <input type="email" id="email" name="email" required>
+    
+          <label for="message">Wiadomość</label>
+          <textarea id="message" name="message" required></textarea>
+    
+          <button type="submit">Wyślij</button>
+        </form>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Tenerife North Cleaning Service. Wszystkie prawa zastrzeżone.</p>
+    <p>&copy; 2025 Tenerife North Cleaning Service</p>
   </footer>
 
   <script src="../scripts/main.js"></script>

@@ -10,6 +10,7 @@
     --color-tertiary: #daeff7;
     --color-muted: #eaeaea;
     --color-nav-bg: #f1f5ff;
+    --color-nav-bg-transparent: #f1f5ffe0;
     --color-form-border: #cccccc;
     --color-button-hover: #68afe4;
 }
@@ -424,7 +425,7 @@ footer {
         left: 0;
         right: 0;
         flex-direction: column;
-        background: var(--color-nav-bg);
+        background: var(--color-nav-bg-transparent);
         padding: 1rem;
         gap: 1rem;
         opacity: 0;
@@ -438,7 +439,7 @@ footer {
     }
 
     nav ul.active {
-        opacity: 0.9;
+        opacity: 1;
         max-height: 400px;
         pointer-events: all;
     }

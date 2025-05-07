@@ -85,8 +85,40 @@ burger.addEventListener('click', () => {
     navList.classList.toggle('active');
 });
 
-navList.querySelectorAll('a').forEach(link => {
+navList.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
         navList.classList.remove('active');
     });
 });
+
+/**
+ * EmailJS
+ */
+emailjs.init({
+    publicKey: 'X2000LzcCPveqxGPs',
+});
+
+document.querySelector('#contact-form')
+    .addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const name = document.querySelector('#contact-form #name');
+        const email = document.querySelector('#contact-form #email');
+        const message = document.querySelector('#contact-form #message');
+        const button = document.querySelector('#contact-form button');
+        button.setAttribute('disabled', true);
+
+        emailjs.sendForm('service_j6sg9h8', 'template_15lrh27', this).then(
+            function () {
+                alert('Email sent successfully!');
+                name.value = '';
+                email.value = '';
+                message.value = '';
+                button.removeAttribute('disabled');
+            },
+            function (error) {
+                alert('Failed to send email: ' + JSON.stringify(error));
+                button.removeAttribute('disabled');
+            }
+        );
+    });

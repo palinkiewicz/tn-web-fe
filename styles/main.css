@@ -196,18 +196,31 @@ section#services {
 /**
  * About section styles
  */
+
+#about {
+    padding-bottom: 0;
+}
+
 #about > div {
     display: flex;
     align-items: center;
     gap: 4rem;
 }
 
+#about > div div:first-of-type {
+    height: 100%;
+    align-self: flex-end;
+}
+
 #about > div div:last-of-type {
     flex: 1;
+    padding-bottom: 3rem;
 }
 
 #about > div img {
-    height: 250px;
+    display: block;
+    max-height: 400px;
+    max-width: 90vw;
 }
 
 /**
@@ -515,8 +528,16 @@ footer {
     }
 
     #about > div {
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 1rem;
+    }
+
+    #about > div div:first-of-type {
+        align-self: unset;
+    }
+
+    #about > div > div:last-of-type {
+        padding-bottom: 1rem;
     }
 
     #contact > div {
